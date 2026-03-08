@@ -1,0 +1,26 @@
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { LoginForm } from "./LoginForm";
+
+export default function LoginPage() {
+    return (
+        <div className="min-h-screen flex items-center justify-center bg-romaya-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+            <div className="w-full max-w-md">
+                <div className="text-center mb-8">
+                    <h2 className="font-display text-4xl font-bold text-romaya-red mb-2">ROMAYA</h2>
+                    <p className="text-romaya-gray-600">Welcome back to the club</p>
+                </div>
+                <Card className="border-0 shadow-xl shadow-romaya-gray-200/50">
+                    <CardHeader className="space-y-1">
+                        <CardTitle className="text-2xl font-bold">Sign In</CardTitle>
+                        <CardDescription>
+                            Enter your email and password to access your account
+                        </CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                        <LoginForm />
+                    </CardContent>
+                </Card>
+            </div>
+        </div>
+    );
+}

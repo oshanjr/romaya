@@ -36,6 +36,9 @@ export const metadata: Metadata = {
   },
 };
 
+import { Navbar } from "@/components/layout/Navbar";
+import { Footer } from "@/components/layout/Footer";
+
 export default function RootLayout({
   children,
 }: {
@@ -43,9 +46,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
-      <body className="antialiased bg-white text-gray-900">
+      <body className="antialiased bg-white text-gray-900 min-h-screen flex flex-col">
         <Providers>
-          {children}
+          <Navbar />
+          <main className="flex-1">
+            {children}
+          </main>
+          <Footer />
           <Toaster position="bottom-right" richColors />
         </Providers>
       </body>
